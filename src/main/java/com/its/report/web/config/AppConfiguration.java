@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import com.its.report.web.api.model.ChannelModel;
 import com.its.report.web.api.model.RegisterCommandModel;
 import com.its.report.web.api.model.TextMessageModel;
-import com.its.report.web.api.thread.ExecureRegisterCommandThread;
+import com.its.report.web.api.thread.ExecuteRegisterCommandThread;
 import com.its.report.web.api.thread.ManagerConnectionThread;
 import com.its.report.web.api.thread.ThreadAbstractBase;
 import com.its.report.web.api.thread.TransferDataThread;
@@ -62,7 +62,7 @@ public class AppConfiguration {
 	
 	@Bean("executeCommandThread")
 	public ThreadAbstractBase executeCommandThread() {
-		ExecureRegisterCommandThread exe = new ExecureRegisterCommandThread();
+		ExecuteRegisterCommandThread exe = new ExecuteRegisterCommandThread();
 		exe.start();
 		return exe;
 	}
