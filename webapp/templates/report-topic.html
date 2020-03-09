@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	th:include="layout/layout :: layout">
+<head th:include="layout/layout :: header">
+<title id="pageTitle">Danh mục báo cáo - ITSHARE</title>
+</head>
+<body id="page-top">
+	<!-- Begin Page Content -->
+	<div class="container-fluid" th:fragment="content">
+		<script src="js/controller/report-topic.controller.js"></script>
+		<!-- Begin Page Content -->
+		<div class="container-fluid">
+
+			<!-- Page Heading -->
+			<h1 class="h3 mb-2 text-gray-800">Danh mục báo cáo</h1>
+			<p class="mb-4">Mục này giúp người dùng đăng ký xuất báo cáo</p>
+
+			<!-- DataTales Example -->
+			<div class="card shadow mb-4">
+				<div class="card-header py-3">
+					<h6 class="m-0 font-weight-bold text-primary">Danh mục báo cáo
+						hệ thống</h6>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<div class="row" style="width: 100%;">
+							<div class="col-md-3 mb-4">
+								<h6 style="margin-top: 10px;">Chọn báo cáo:</h6>
+							</div>
+							<div class="col-md-9 mb-4">
+								<select class="browser-default custom-select" id="reportName">
+									<option selected="">Chọn báo cáo</option>
+									<option value="RP-THTTKH">Báo cáo 1 - Tổng hợp thông
+										tin khách hàng</option>
+									<option value="RP-THTTDN">Báo cáo 2 - Tổng hợp thông
+										tin doanh nghiệp</option>
+									<option value="RP-THTTTT">Báo cáo 3 - Tổng hợp thông
+										tin thị trường</option>
+								</select>
+							</div>
+
+						</div>
+						<hr class="sidebar-divider d-none d-md-block">
+						<div class="table-responsive">
+							<div class="row" style="width: 100%;">
+								<div class="col-md-3 mb-4">
+									<h6 style="margin-top: 10px;">Ngày bắt đầu:</h6>
+								</div>
+								<div class="col-md-9 mb-4">
+									<input class="form-control bg-light border-0 small"
+										type="datetime" placeholder="dd/mm/yyyy hh:mi" required
+										pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" name="search-from-date"
+										id="search-from-date" />
+								</div>
+							</div>
+
+							<div class="row" style="width: 100%;">
+								<div class="col-md-3 mb-4">
+									<h6 style="margin-top: 10px;">Ngày kết thúc:</h6>
+								</div>
+								<div class="col-md-9 mb-4">
+									<input type="datetime"
+										class="form-control bg-light border-0 small"
+										placeholder="dd/mm/yyyy hh:mi" required
+										pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" name="search-to-date"
+										id="search-to-date" />
+								</div>
+							</div>
+						</div>
+
+						<div class="row" style="width: 100%;">
+							<div class="col-md-12 mb-4 text-right">
+								<a href="#" onclick="callRequest()" class="btn btn-primary btn-icon-split btn-sm"> <span
+									class="icon text-white-50"> <i class="fas fa-check"></i>
+								</span> <span class="text">Đăng ký xuất báo cáo</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- End of Main Content -->
+</body>
+
+</html>

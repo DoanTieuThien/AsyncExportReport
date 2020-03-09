@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org"
+	th:include="layout/layout :: layout">
+<head th:include="layout/layout :: header">
+<title id="pageTitle">Dashborad - Danh sách các báo cáo hiện tại
+	đang chạy</title>
+</head>
+<body id="page-top">
+	<!-- Begin Page Content -->
+	<div class="container-fluid" th:fragment="content">
+		<script src="js/controller/report-dashboard.controller.js"></script>
+		<!-- Begin Page Content -->
+		<div class="container-fluid">
+
+			<!-- Page Heading -->
+			<h1 class="h3 mb-2 text-gray-800">Dashboard</h1>
+			<p class="mb-4">Mục này sẽ hiển thị tất cả các báo cáo đã được
+				thực thi và xử lý hoặc đang được xử lý trong thời gian gần nhất</p>
+
+			<!-- DataTales Example -->
+			<div class="card shadow mb-4">
+				<div class="card-header py-3">
+					<h6 class="m-0 font-weight-bold text-primary">Danh sách báo
+						cáo hiện tại đang chờ</h6>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table table-bordered"  width="100%"
+							cellspacing="0" id = "reportDataList">
+							<thead>
+								<tr>
+									<th>STT</th>
+									<th>Tên báo cáo</th>
+									<th>Mã báo cáo</th>
+									<th>Kênh tạo</th>
+									<th>Trạng thái</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- End of Main Content -->
+</body>
+
+</html>
